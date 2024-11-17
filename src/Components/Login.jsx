@@ -44,7 +44,7 @@ const Login = () => {
        axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/contactmsyt/Login', values)
         
             .then(res => {
-                if (res.data.success) {
+                if (res) {
                     toast.success("Login Successfully", {
                         position: "top-left",
                         autoClose: 2000
