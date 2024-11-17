@@ -112,7 +112,7 @@ function Admin() {
     ]
 
     //const [Software_Name, Other_Software, Purpose, Hostname, Remark, Status] = contacts.body;
-    axios.defaults.withCredentials = true; //##
+    //axios.defaults.withCredentials = true; //##
     const handleStatusChange = async (e, row) => {
         try {
           // Check if the status has already been changed
@@ -122,8 +122,8 @@ function Admin() {
           }
       
           const updatedRow = { ...row, Status: e.target.value };
-          //await axios.put(`http://127.0.0.1:3000/contactmsyt/records/${row._id}`, updatedRow, {
-            await axios.put(`https://slm-software-api.vercel.app/contactmsyt/records/${row._id}`, updatedRow, {
+            await axios.put(`http://127.0.0.1:3000/contactmsyt/records/${row._id}`, updatedRow, {
+            //await axios.put(`https://slm-software-api.vercel.app/contactmsyt/records/${row._id}`, updatedRow, {
             
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`,
@@ -202,8 +202,8 @@ function Admin() {
 
     useEffect(() => {
         // setLoading(true)
-       // fetch('http://127.0.0.1:3000/contactmsyt/contacts')
-       fetch('https://slm-software-api.vercel.app/contactmsyt/contacts')
+        fetch('http://127.0.0.1:3000/contactmsyt/contacts')
+       //fetch('https://slm-software-api.vercel.app/contactmsyt/contacts')
         
           .then(response => response.json())
           .then(data => {

@@ -11,18 +11,18 @@ function Edit() {
     const [data, setData] = useState([])
     const navigate = useNavigate();
     useEffect(() => {
-       // axios.get('http://localhost:3001/posts/'+id)
-       axios.get('https://slm-software-api.vercel.app/posts/'+id)
+        axios.get('http://localhost:3001/posts/'+id)
+       //axios.get('https://slm-software-api.vercel.app/posts/'+id)
        
             .then(res => setData(res.data))
             .catch(err => console.log(err))
 
     }, [])
-    axios.defaults.withCredentials = true; //##
+    //axios.defaults.withCredentials = true; //##
     function handleSubmit(event){
         event.preventDefault();
-        //axios.put('http://localhost:3001/posts/'+id, data)
-        axios.put('https://slm-software-api.vercel.app/posts/'+id, data)
+        axios.put('http://localhost:3001/posts/'+id, data)
+        //axios.put('https://slm-software-api.vercel.app/posts/'+id, data)
         
         .then(res=>{
             alert("Data Updated Successfully");
