@@ -40,8 +40,8 @@ const Login = () => {
     const errs = Validation(values)
     setErrors(errs);
     if (errs.email === "" && errs.password === "") {
-        axios.post('http://127.0.0.1:3000/contactmsyt/Login', values)
-       //axios.post('https://slm-software-api.vercel.app/contactmsyt/Login', values)
+        //axios.post('http://127.0.0.1:3000/contactmsyt/Login', values)
+       axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/contactmsyt/Login', values)
         
             .then(res => {
                 if (res.data.success) {
