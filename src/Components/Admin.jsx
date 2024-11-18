@@ -123,7 +123,7 @@ function Admin() {
       
           const updatedRow = { ...row, Status: e.target.value };
             //await axios.put(`http://127.0.0.1:3000/contactmsyt/records/${row._id}`, updatedRow, {
-            await axios.put(`https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/contactmsyt/records/${row._id}`, updatedRow, {
+            await axios.put(`https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/test/records/${row._id}`, updatedRow, {
             
             headers: {
               Authorization: `Berear ${localStorage.getItem('token')}`,
@@ -203,7 +203,7 @@ function Admin() {
     useEffect(() => {
         // setLoading(true)
         //fetch('http://127.0.0.1:3000/contactmsyt/contacts')
-       fetch('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/contactmsyt/contacts')
+       fetch('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/test/contacts')
         
           .then(response => response.json())
           .then(data => {

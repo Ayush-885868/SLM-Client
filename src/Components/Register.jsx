@@ -44,7 +44,7 @@ const Register = () => {
         setErrors(errs);
         if (errs.name === "" && errs.designation === "" && errs.email === "" && errs.password === "") {
             //axios.post('http://127.0.0.1:3000/contactmsyt/Register', values)
-            axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/contactmsyt/Register',values)
+            axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/test/Register',values)
                 .then(res => {
                     if(res.data.success){
                     toast.success(`${values.name},Account Created Successfully.`, {
