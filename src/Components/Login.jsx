@@ -36,6 +36,8 @@ const Login = () => {
 
     //axios.defaults.withCredentials = true; //##
     const handleSubmit = (e) => {
+        console.log('Login request received:', req.body);
+
     e.preventDefault();
     const errs = Validation(values)
     setErrors(errs);
