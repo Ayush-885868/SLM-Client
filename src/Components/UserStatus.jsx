@@ -68,7 +68,7 @@ function UserStatus() {
         //axios.defaults.withCredentials = true; //##
         useEffect(() => {
             //axios.get('http://127.0.0.1:3000/contactmsyt/installreqs', {
-            axios.get('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/test/installreqs', {
+            axios.get('https://slm-server.vercel.app/test/installreqs', {
                 
                 headers: {                                                      
                     Authorization: `Berear ${localStorage.getItem('token')}`       

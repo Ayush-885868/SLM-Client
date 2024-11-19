@@ -10,7 +10,7 @@ const InstallSoft = () => {
     const downloadLocation = '/home/user/downloads/node-v14.17.0-linux-x64.tar.xz';
 
     //axios.post('http://localhost:3001/download/approvedSoftware', { softwareUrl, downloadLocation })
-    axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/download/approvedSoftware', { softwareUrl, downloadLocation })
+    axios.post('https://slm-server.vercel.app/download/approvedSoftware', { softwareUrl, downloadLocation })
     
       .then(response => {
         console.log(response.data);

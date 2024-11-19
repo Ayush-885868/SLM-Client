@@ -45,7 +45,7 @@ function Usser() {
     const handleSubmit = (e) => {
         e.preventDefault();
         //axios.post('http://127.0.0.1:3000/contactmsyt/add-request', AddedData, {
-        axios.post('https://slm-server.vercel.app/?vercelToolbarCode=2gcm6pfmE_CMslA/test/add-request', AddedData, {
+        axios.post('https://slm-server.vercel.app/test/add-request', AddedData, {
             
             headers: {
                 Authorization: `Berear ${localStorage.getItem('token')}`
